@@ -33,7 +33,7 @@ func Generate(key *rsa.PrivateKey, clientId string) (string, error) {
 	now := time.Now()
 	claims := jwt.MapClaims{
 		"iat": now.Add(-time.Minute).Unix(),
-		"exp": now.Add(10 * time.Minute).Unix(),
+		"exp": now.Add(5 * time.Minute).Unix(),
 		"iss": clientId,
 	}
 
